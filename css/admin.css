@@ -1,0 +1,892 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root {
+   --orange: rgb(255, 102, 0);
+   --green: #27ae60;
+   --red: crimson;
+   --skyblue: #03a9fa;
+   --black: #192a56;
+   --light-color: #666;
+   --border: .1rem solid rgba(0,0,0,.2);
+   --box-shadow: 1px 1px 3px 1px rgba(0,0,0,.05);
+}
+
+*{
+   font-family: 'Nunito', sans-serif;
+   margin: 0; padding: 0;
+   box-sizing: border-box;
+   text-decoration: none;
+   outline: none;
+   border: none;
+   transition: all .1s linear;
+}
+
+html {
+   font-size: 95%;
+   overflow-x: hidden;
+   scroll-padding-top: 5.5rem;
+   scroll-behavior: smooth;
+}
+
+section {
+   padding: 2rem 9%;
+}
+
+/* login css section */
+.login{
+   width: 370px;
+   margin: 0 auto;
+   border-radius: .5rem;
+   margin-top: 120px;
+}
+
+.login .loginHead h2{
+   text-align: center;
+   font-size: 35px;
+   color: var(--black);
+}
+
+.login table{
+   width: 100%;
+}
+
+.login form table label{
+   color: var(--black);
+   font-weight: 600;
+   font-size: 15px;
+}
+
+.login form table tr td{
+   position: relative;
+}
+
+.login form table tr td input{
+   position: relative;
+   width: 100%;
+   background: rgb(238, 238, 238);
+   padding: 8px 35px;
+   margin-bottom: 15px;
+   border-radius: 5px;
+   font-size: 15px;
+}
+
+.login form table tr td i{
+   position: absolute;
+   color: var(--black);
+   top: 10px;
+   left: 12px;
+   z-index: 10;
+}
+
+.login form .button {
+   width: 100%;
+   background: var(--black);
+   color: #fff;
+   padding: 5px;
+   font-size: 20px;
+   border-radius: 5px;
+   margin: 10px 0;
+   cursor: pointer;
+}
+
+.remReg{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 0 5px;
+}
+
+.login .remember {
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+   font-size: 13px;
+   font-weight: 600;
+   color: var(--black);
+}
+
+.login .remember input{
+   align-self: center;
+   margin-left: 5px;
+   margin-bottom: 2px;
+}
+
+/* navigation css section */
+.mycontainer{
+   position: relative;
+   width: 100%;
+}
+.navigation{
+   position: fixed;
+   width: 240px;
+   height: 100%;
+   background-color: rgba(19, 19, 19, 0.9);
+   overflow: hidden;
+}
+.navigation.active{
+   width: 60px;
+}
+.navigation ul{
+   position: absolute;
+   top: 0; left: 0;
+   width: 100%;
+   list-style: none;
+}
+.navigation ul li{
+   position: relative;
+   width: 100%;
+}
+.navigation ul li:hover {
+   background: rgba(0,0,0,.5);
+}
+.navigation ul li:nth-child(1):hover{
+   background: transparent;
+}
+.navigation ul li:nth-child(2):hover{
+   background: transparent;
+}
+.navigation ul li:nth-child(1){
+   margin: 0 0 10px 0;
+}
+.navigation ul li:nth-child(2){
+   padding: 0 20px;
+   font-size: 18px;
+}
+.navigation ul li:nth-child(2) span{
+   color: var(--orange);
+}
+.navigation ul li:nth-child(2) .title{
+   text-transform: uppercase;
+   font-weight: bolder;
+}
+.navigation ul li a{
+   position: relative;
+   display: block;
+   width: 100%;
+   display: flex;
+   color: #fff;
+   text-decoration: none;
+}
+.navigation ul li a .icon{
+   position: relative;
+   display: block;
+   min-width: 60px;
+   line-height: 50px;
+   text-align: center;
+}
+.navigation ul li a .icon i{
+   color: #fff;
+   font-size: 21px;
+}
+.navigation ul li a .title{
+   position: relative;
+   display: block;
+   padding: 0 5px;
+   height: 40px;
+   line-height: 50px;
+   white-space: nowrap;
+   text-transform: capitalize;
+}
+.navigation ul li a .notification{
+   font-size: 10px;
+   align-self: center;
+   margin-left: auto;
+   margin-right: 20px;
+   border-radius: 50px;
+   text-align: center;
+   padding: 1px 6px;
+   background: rgb(255, 51, 0);
+}
+
+/* Setup section */
+.setup-item{
+   margin-left: 20px;
+}
+.setup-item h5{
+   font-weight: 700;
+   color: rgba(0,0,0,.8);
+}
+.setup-item ul{
+   list-style: none;
+   margin: 0;
+}
+.setup-item ul li{
+   padding: 2px 10px;
+}
+.setup-item ul li a{
+   color: rgb(22, 141, 189);
+   font-size: 14px;
+   font-weight: 600;
+}
+.setup-item ul li a:hover{
+   color: var(--orange);
+}
+
+/* Main css section */
+.main{
+   position: absolute;
+   width: calc(100% - 240px);
+   left: 240px;
+   min-height: 100vh;
+   background: rgb(245, 245, 245);
+   box-shadow: var(--box-shadow);
+}
+
+.main.active{
+   width: calc(100% - 60px);
+   left: 60px;
+}
+
+.main .topbar{
+   width: 100%;
+   height: 60px;
+   padding: 0 20px 0 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background: white;
+   box-shadow: var(--box-shadow);
+}
+
+.main .topbar .toggle{
+   position: relative;
+   width: 60px;
+   height: 60px;
+   cursor: pointer;
+}
+
+.toggle i{
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   line-height: 60px;
+   font-size: 20px;
+   text-align: center;
+   color: var(--black);
+}
+
+.search{
+   position: relative;
+   width: 400px;
+   margin: 0 10px;
+   display: flex;
+   justify-content: flex-start;
+   align-items: center;
+}
+
+.search i{
+   position: absolute;
+   color: var(--light-color);
+   top: 10px; left: 13px;
+   font-size: 17px;
+}
+
+.search input[type="text"]{
+   width: 100%;
+   border-radius: 5px;
+   padding: 7px 35px;
+   margin-right: 5px;
+   border: var(--border);
+   font-size: 15px;
+}
+.search input[type="submit"]{
+   padding: 9px 20px;
+   background: rgb(255, 153, 0);
+   color: #fff;
+   border-radius: 4px;
+   font-weight: 500;
+   font-size: 14px;
+   cursor: pointer;
+}
+.search input[type="submit"]:hover{
+   background: rgb(231, 116, 8);
+}
+
+.user-profile{
+   position: relative;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.user-profile .personel{
+   padding: 0 15px;
+   line-height: 15px;
+   margin-top: 8px;
+}
+
+.user-profile .personel .administrator{
+   font-size: 12px;
+   color: var(--orange);
+   font-weight: 600;
+}
+
+.user-profile .personel .admin-name{
+   font-size: 14px;
+   color: rgba(0,0,0,.8);
+   font-weight: bolder;
+   text-transform: capitalize;
+}
+
+.user{
+   position: relative;
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.user img{
+   position: absolute;
+   top: 0; left: 0; 
+   width: 100%;
+}
+
+/* cardBox section */
+.panel {
+   position: relative;
+   width: 100%;
+   padding: 20px;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(10rem, 2fr));
+   grid-gap: 20px;
+}
+
+.panel .panel-item{
+   position: relative;
+   background: #fff;
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   cursor: pointer;
+   border-radius: .3rem;
+   box-shadow: var(--box-shadow);
+}
+
+.panel .panel-item .number{
+   position: relative;
+   font-size: 1.7em;
+   color: var(--black);
+   font-weight: bolder;
+}
+
+.panel .panel-item .cardName{
+   color: var(--light-color);
+   font-size: 16px;
+   font-weight: 500;
+   text-transform: capitalize;
+}
+
+.panel .panel-item .iconBox{
+   font-size: 1.2em;
+   color: var(--black);
+}
+
+/* Details css section */
+.details{
+   position: relative;
+   width: 100%;
+   padding: 20px;
+   padding-top: 0;
+   display: grid;
+   grid-template-columns: 2.5fr 1fr;
+   gap: 20px;
+}
+
+/* recent orders */
+.details .recentOrders{
+   position: relative;
+   border-radius: .3rem;
+   background: #fff;
+   padding: 20px;
+   box-shadow: var(--box-shadow);
+}
+
+.details .recentOrders .cardHeader{
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   padding-left: 10px;
+}
+
+.details .recentOrders .cardHeader h2{
+   font-weight: 700;
+   font-size: 22px;
+   color: var(--black);
+   text-transform: capitalize;
+}
+
+.details .recentOrders .cardHeader .btn{
+   position: relative;
+   padding: 4px 8px;
+   font-size: 13px;
+   font-weight: 600;
+   color: var(--black);
+   border: var(--border);
+   border-radius: 3px;
+}
+
+.details table{
+   width: 100%;
+   border-collapse: collapse;
+   margin-top: 10px;
+}
+.details table thead tr{
+   background: #eee;
+}
+.details table thead td{
+   font-weight: bolder;
+   color: var(--black);
+   padding: 10px;
+   text-transform: capitalize;
+}
+
+.details table tbody td{
+   padding: 10px;
+   font-weight: 500;
+   text-transform: capitalize;
+   font-size: 14px;
+}
+
+.details table tbody td:first-child{
+   font-weight: 600;
+   color: rgba(0,0,0,.8);
+}
+
+.details .recentOrders table tr{
+   border-bottom: 1px solid rgba(0,0,0,.1);
+}
+.details .recentOrders table tbody tr:hover{
+   background: rgb(214, 252, 216);
+   transition: all .05s linear;
+   cursor: pointer;
+}
+
+.details .recentOrders table tr td:last-child{
+   text-align: right;
+}
+
+.details .recentOrders table .status{
+   position: relative;
+   padding: 2px 5px;
+   border-radius: 4px;
+   font-size: 14px;
+   font-weight: 400;
+   text-transform: capitalize;
+}
+
+.delivered{
+   color: var(--green);
+}
+.processing{
+   color: var(--red);
+}
+.cancelled{
+   color: var(--light-color);
+}
+
+/* recent customers */
+.details .recentCustomers{
+   position: relative;
+   border-radius: .3rem;
+   background: white;
+   padding: 20px;
+   box-shadow: var(--box-shadow);
+}
+
+.details .recentCustomers h2{
+   color: var(--black);
+   font-size: 22px;
+}
+
+.details .recentCustomers .imgBx{
+   position: relative;
+   width: 35px;
+   height: 35px;
+   overflow: hidden;
+   border-radius: 50%;
+   object-fit: cover;
+}
+
+.details .recentCustomers .imgBx img{
+   position: absolute;
+   top: 0;left: 0;
+   width: 100%;
+}
+.details .recentCustomers table thead tr{
+   background: transparent;
+   display: flex;
+   align-items: center;
+   justify-content: start;
+}
+.details .recentCustomers table tr:hover{
+   background: var(--skyblue);
+   color: white;
+   transition: all .1s linear;
+   cursor: pointer;
+}
+
+.details .recentCustomers table tr:hover h4,
+.details .recentCustomers table tr:hover span{
+   color: white;
+}
+
+.details .recentCustomers table tr td{
+   padding: 7px 10px;
+   align-self: flex-start;
+}
+
+.details .recentCustomers table tr td h4{
+   font-size: 13px;
+   font-weight: bold;
+   line-height: 1.2em;
+   color: rgba(0,0,0,.8);
+}
+
+.details .recentCustomers table tr td span{
+   font-size: 12px;
+   color: #b9b9b9;
+}
+
+
+/* ADMIN SETUP CONTENTS CSS SECTION */
+.gen_setup{
+   margin: 0;
+   font-weight: bold;
+   padding: 15px 0 0 20px;
+   color: var(--orange);
+}
+nav{
+   margin-top: 10px;
+   padding: 0 17px;
+}
+nav a{
+   color: rgba(0,0,0,.8);
+   font-weight: 600;
+   font-size: 15px;
+}
+.nav-pills a {
+   color: rgba(37, 37, 37, 0.8);
+   font-weight: 600;
+}
+.tab-content{
+   padding: 17px;
+}
+#v-pills-tabContent h4{
+   font-weight: bold;
+   font-size: 20px;
+   color: rgba(0,0,0,.8);
+}
+
+.setup form{
+   width: 80%;
+   position: relative;
+   margin: 20px;
+}
+.setup form .form-group{
+   margin-bottom: 15px;
+}
+.setup form .form-group label{
+   font-size: 13px;
+   font-weight: 600;
+   color: rgb(41, 41, 41);
+   margin-bottom: -5px;
+   margin-left: 7px;
+   text-transform: capitalize;
+}
+#add_prod{
+   background: rgb(255, 153, 0);
+   width: 100%;
+   color: #fff;
+   text-transform: uppercase;
+   padding: 10px;
+   border-radius: 4px;
+   margin-top: 20px;
+   box-shadow: 1px 2px 5px 3px rgba(0,0,0,.15);
+}
+#upd_btn, #del_btn{
+   padding: 6px 20px;
+   border-radius: 3px;
+   text-decoration: none;
+   color: #fff;
+   font-size: 15px;
+   box-shadow: 1px 2px 5px 3px rgba(0,0,0,.15);
+}
+#upd_btn{
+   background-color: rgb(12, 39, 61);
+   margin-right: 10px;
+}
+#del_btn{
+   background-color: rgb(235, 52, 6);
+}
+.setup form .form-group input:not(input[type="radio"]),
+.setup form .form-group select,
+.setup form .form-group textarea{
+   width: 100%;
+   padding: 7px 12px;
+   border-radius: 4px;
+   border: 1px solid rgba(0,0,0,.2);
+   color: rgba(0,0,0,.9);
+   font-weight: 600;
+}
+.setup form .form-group input::placeholder,
+.setup form .form-group select::placeholder, 
+.setup form .form-group textarea::placeholder{
+   color: rgba(0,0,0,.3);
+   font-weight: normal;
+}
+.setup form .form-group input[type="file"]{
+   border: none !important;
+}
+.setup form .active{
+   margin-top: 30px;
+}
+
+/* VIEW ALL PRODUCTS CSS SECTION */
+.all-products{
+   width: 100%;
+}
+.all-products table{
+   width: 100%;
+}
+.all-products table tr th{
+   color: #ff9100;
+   font-size: 14px;
+   border-bottom: 1px solid rgba(0,0,0,.3);
+   padding: 2px 4px 2px 0;
+   font-weight: 600;
+}
+.all-products table tr td{
+  font-size: 14px;
+  padding-bottom: 3px;
+}
+
+.all-categories h4{
+   margin-bottom: 20px;
+}
+.all-categories table{
+   width: 80%;
+}
+.all-categories table tr th{
+   color: #ff8800;
+   border-bottom: 1px solid rgba(0,0,0,.2);
+   padding: 3px 0;
+}
+.all-categories table tr td{
+   font-weight: 600;
+   padding: 5px 0;
+}
+
+/* MANAGE PRODUCTS CSS */
+.manage_prod{
+   width: 100%;
+}
+.manage_prod .search-form{
+   width: 100%;
+}
+.manage_prod .search-form span{
+   color: rgba(0,0,0,.9);
+   font-weight: 600;
+}
+.manage_prod .search-form select,
+.manage_prod .search-form input[type="search"]{
+   width: 250px;
+   border: 1px solid rgba(0,0,0,.1);
+   padding: 5px 12px;
+   border-radius: 4px;
+   margin-right: 10px;
+}
+.manage_prod .search-form input[type="search"]{
+   margin-right: 0;
+   width: 200px;
+}
+.manage_prod .search-form input[type="submit"]{
+   padding: 5px 20px;
+   border-radius: 3px;
+   background: #ff8800;
+   color: white;
+   font-weight: 600;
+}
+.prod_img{
+   width: 115px;
+   height: 115px;
+   overflow: hidden;
+   border-radius: 5px;
+   border: 1px solid rgba(0,0,0,.2);
+   background: #fff;
+}
+.user-img{
+   width: 40px; height: 40px;
+   overflow: hidden;
+   border-radius: 5px;
+   border: 1px solid rgba(0,0,0,.1);
+   margin: 2px 0; 
+}
+.user-img img{
+   width: 100%;
+}
+/* Update user status */
+.user-upd-wrapper{
+   display: grid;
+   grid-template-columns: 3fr 1fr;
+   grid-gap: 10px;
+}
+.user-upd-wrapper form{
+   width: 90%;
+}
+.user-upd-wrapper form label{
+   font-size: 12px;
+   color: rgb(255, 115, 0);
+   margin-bottom: -5px;
+}
+.user-upd-wrapper form input:not(input[type="radio"]),
+.user-upd-wrapper form select,
+.user-upd-wrapper form textarea{
+   background: transparent;
+   width: 100%;
+   font-size: 15px;
+   font-weight: 600;
+   color: rgba(0,0,0,.8);
+}
+.user-upd-wrapper .disp-img{
+   width: 300px;
+   height: 300px;
+   overflow: hidden;
+   border-radius: 10px;
+   border: 1px solid rgba(0,0,0,.2);
+}
+
+/* PENDING ORDER */
+.pending_order tr th{
+   text-align: center;
+   border: none;
+}
+.pending_order tr td:first-child{
+   font-weight: 600;
+   text-align: left !important;
+}
+.pending_order tr td:nth-child(2){
+   font-weight: 700;
+   color: rgba(0,0,0,.5);
+   font-size: 13px;
+}
+.pending_order tr td .confirm_order{
+   background: rgb(240, 132, 10);
+   padding: 6px 10px;
+   border-radius: 3px;
+   color: #fff;
+   font-weight: 600;
+   text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:993px){
+   .navigation{
+      left: -300px;
+   }
+   .navigation.active{
+      left: 0;
+      width: 300px;
+   }
+   .main{
+      width: 100%;
+      left: 0;
+   }
+   .main.active{
+      width: calc(100% - 300px);
+      left: 300px;
+   }
+   .cardBox {
+      grid-template-columns: repeat(2, 2fr);
+   }
+}
+
+
+@media (max-width:768px){
+   .navigation{
+      width: 60px;
+   }
+   .search{
+      position: relative;
+      width: 300px;
+      margin: 0 10px;
+   }
+   .user-profile .personel{
+      display: none;
+   }
+   .user{
+      position: relative;
+      width: 35px;
+      height: 35px;
+      border-radius: 50px;
+      overflow: hidden;
+      cursor: pointer;
+   }
+   .details{
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .cardBox {
+      grid-template-columns: repeat(2, 1fr);
+   }
+}
+
+@media (max-width:480px){
+   .main{
+      width: 100%;
+   }
+   .cardBox{
+      grid-template-columns: repeat(1, 1fr);
+   }
+   .details .recentOrders{
+      overflow-x: auto;
+   }
+   .details .recentOrders table{
+      width: 600px;
+   }
+   .navigation{
+      width: 100%;
+      left: -100%;
+      z-index: 1000;
+   }
+  .navigation.active{
+     width: 100%;
+     left: 0;
+  }
+
+  .toggle.active{
+     position: fixed;
+     z-index: 1000;
+     right: 0;
+     left: initial;
+  }
+  .toggle.active::before{
+     color: white;
+  }
+
+  .search{
+   position: relative;
+   width: 200px;
+   margin: 0 5px;
+}
+}
